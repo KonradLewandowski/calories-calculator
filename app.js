@@ -22,6 +22,9 @@ const mealRouter = require('./routes/mealRouter');
 //Start express APP
 const app = express();
 
+//trust proxies
+app.enable('trust proxy');
+
 //PUG
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));

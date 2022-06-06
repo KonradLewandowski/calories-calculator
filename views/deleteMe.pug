@@ -1,0 +1,11 @@
+extends main
+
+block content
+    main.main
+        .user-view__content
+            .user-view__form-container
+                h2.heading-secondary.delete-user Are you sure?
+                form.form.form-user-data
+                    label.form__label(for='password-current') Type your password to confirm
+                    input#password-delete_user.form__input(type='password', placeholder='••••••••', required, minlength='8')
+                    button#button-delete_user.btn.btn__back Confirm

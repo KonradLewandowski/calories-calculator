@@ -1,0 +1,93 @@
+-if(dates){var date = dates[dates.length-1] ?.createdAt.toISOString().split('T')[0]}
+header.header
+    nav#nav-input
+
+        div.nav-input 
+
+            input#date-form-lte.form__input.form__input--search(type='date', placeholder='search' value=`${new Date().toISOString().split('T')[0]}` min="2022-01-01") 
+            span.arrow ⬇
+
+            input#date-form-gte.form__input.form__input--search(type='date', placeholder='search' value=`${date}` min="2022-01-01") 
+            span.arrow ⬆
+
+            .show-dates 🔎
+    .header__logo
+        if user
+            a.nav__el-logo(href='/me')
+                img(src='/img/logo.png' alt='calculator logo')
+        else 
+            
+    nav.nav--user
+        if user
+            a.nav__el.nav__el--logout Log out
+            a.nav__el(href='/settings')
+                span.nav--user-name= user.name.split(' ')[0]
+        else
+            a.nav__el(href='/login') Log in
+            a.nav__el.nav__el--cta(href='/signup') Sign up
+
+    .edit_exists.edit-details.add_form-details
+        a#close_change.button-edit.close_form(href='#') ❌
+        .edit-header
+            label(for="weight_change") Weight
+                input#weight_change.change_product-input(type="text")
+        .edit-details
+            .totals 
+                p 🔥Total calories:
+                    span#total-calories.tot
+                //- p ⚖️Total weight:
+                //-     span#total-weight
+                p ⚡Total nutritions:
+
+                span 🍖Whey: 
+                    span#total-whey.tot 
+                span ⚫Carbo: 
+                    span#total-carbohydrates.tot
+                span 🥓Fat:  
+                    span#total-fat.tot
+            a#confirm_change.button-edit.change_product-confirm ✅
+
+    .add_form-contariner
+        a#close.close_form(href='#') ❌
+        .add_form-header
+            .search-product
+                input(type="search" placeholder='Search for product') 
+                .input_search-container
+                    //- .item-list  test
+                    //- .item-list  test
+                    //- .item-list  test
+        .add_form-details 
+            label(for="name") Name 
+            input#name.add_product-input(type="text" placeholder="Name")
+
+            label(for="weight") Weight ⚖️
+            input#weight.add_product-input(type="text" placeholder="weight")
+
+            label(for="calories") Calories 🔥
+            input#calories.add_product-input.dynamic-change(type="text" placeholder="Calories/100g")
+
+            label(for="whey") Whey 🍖
+            input#whey.add_product-input.dynamic-change(type="text" placeholder="Whey/100g")
+
+            label(for="carbohydrates") Carbohydrates/100g ⚫
+            input#carbohydrates.add_product-input.dynamic-change(type="text" placeholder="Carbohydrates")
+
+            label(for="fat") Fat/100g 🥓
+            input#fat.add_product-input.dynamic-change(type="text" placeholder="Fat")
+
+        .add_form-footer
+            .totals 
+                p 🔥Total calories:
+                    span#total-calories.tot
+                //- p ⚖️Total weight:
+                //-     span#total-weight
+                p ⚡Total nutritions:
+
+                span 🍖Whey: 
+                    span#total-whey.tot 
+                span ⚫Carbo: 
+                    span#total-carbohydrates.tot
+                span 🥓Fat:  
+                    span#total-fat.tot
+            a.add_product-confirm ✅
+

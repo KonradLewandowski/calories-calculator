@@ -1,0 +1,96 @@
+extends main
+    
+block content
+
+         
+    main.main
+        -if(result >= 11)
+            a.btn-next(href=`${req.protocol}://${req.get('host')}/me?page=${req.query.page*1+1}`) Next page >
+        -if(req.query.page>1) 
+            a.btn-back(href=`${req.protocol}://${req.get('host')}/me?page=${req.query.page*1-1}`) < Previous page 
+        .day-container
+            .day
+                a#reset-form.reset-day(href='#') 🚮
+                .day__header
+                    h3.heading-primary
+                        a.add-day(href='#')
+                            span ADD DAY
+                .day__details 
+                    p.meal__container.breakfast BREAKFAST 
+                        a.btn_create.btn_create-breakfast(href="#" value="breakfast") ➕
+
+                    .end
+                    p.meal__container.lunch LUNCH  
+                        a.btn_create.btn_create-lunch(href="#" value="lunch") ➕
+
+                        .end
+                    p.meal__container.dinner DINNER 
+                        a.btn_create.btn_create-dinner(href="#" value="dinner") ➕
+
+                        .end
+
+            each eachDay in days
+
+                .day
+                    a.delete-day(href='#' value=eachDay._id) ❌
+                    .day__header
+                        h3.heading-primary
+                            a.edit-day.edit-date.modal(href='#' )
+                                span= eachDay.createdAt.toLocaleString('en-GB', {day: '2-digit' ,month: 'long', year: 'numeric'})
+
+                    input.new-date.modal(type='date')
+                    .day__details
+                        p
+                            span.day__footer-value= `${eachDay.calories} calories`  
+                        p.meal__container.breakfast BREAKFAST
+                            a.btn_create.btn_add(href="#" value="breakfast") ➕
+                            each product, i in eachDay.breakfast 
+                                -if(!product.product) return
+                                .edit-field.editing
+                                    span.delete.srv-side_delete(value=product._id) ❌
+                                    .name_of_product
+                                        .header_name(value='breakfast') 
+                                            span=product.product.name[0].toUpperCase() + product.product.name.slice(1) 
+                                        p=`🔥${product.product.energy*product.weight/100} kcal`
+                                        span=`⚖️${product.weight} g`
+                                        span=`🍖${product.product.whey} g`
+                                        span=`⚫${product.product.carbohydrates} g`
+                                        span=`🥓${product.product.fat} g`
+                                        p.line
+                                .end
+                        p.meal__container.lunch LUNCH 
+                            a.btn_create.btn_add(href="#" value="lunch") ➕
+                            each product,i in eachDay.lunch 
+                                -if(!product.product) return
+                                .edit-field.editing
+                                    span.delete.srv-side_delete(value=product._id) ❌
+                                    .name_of_product
+                                        .header_name(value='breakfast') 
+                                            span=product.product.name[0].toUpperCase() + product.product.name.slice(1) 
+                                            span.delete.srv-side_delete(value=product._id) ❌
+                                        p=`🔥${product.product.energy*product.weight/100} kcal`
+                                        span=`⚖️${product.weight} g`
+                                        span=`🍖${product.product.whey} g`
+                                        span=`⚫${product.product.carbohydrates} g`
+                                        span=`🥓${product.product.fat} g`
+                                        p.line
+                                .end
+                        p.meal__container.dinner DINNER 
+                            a.btn_create.btn_add(href="#" value="dinner") ➕
+                            each product,i in eachDay.dinner 
+                                -if(!product.product) return
+                                .edit-field.editing
+                                    span.delete.srv-side_delete(value=product._id) ❌
+                                    .name_of_product
+                                        .header_name(value='breakfast') 
+                                            span=product.product.name[0].toUpperCase() + product.product.name.slice(1) 
+                                            span.delete.srv-side_delete(value=product._id) ❌
+                                        p=`🔥${product.product.energy*product.weight/100} kcal`
+                                        span=`⚖️${product.weight} g`
+                                        span=`🍖${product.product.whey} g`
+                                        span=`⚫${product.product.carbohydrates} g`
+                                        span=`🥓${product.product.fat} g`
+                                        p.line
+                                .end
+
+        

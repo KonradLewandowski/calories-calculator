@@ -32,14 +32,14 @@ app.set('views', path.join(__dirname, 'views'));
 
 //1)GLOBAL MIDDLEWARES
 //Implement CORS
-app.use(cors());
+// app.use(cors());
 //Access-Control-Allow-Origin
 //api.products.com, products.com
 //app.use(cors({
 //   origin: 'https://www.products.com'
 // }))
 
-app.options('*', cors());
+// app.options('*', cors());
 // app.options('/api/v1/products/:id', cors());
 
 // app.disable('etag');

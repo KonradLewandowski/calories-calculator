@@ -3,14 +3,14 @@ header.header
     nav#nav-input
 
         div.nav-input 
+            if user
+                input#date-form-lte.form__input.form__input--search(type='date', placeholder='search' value=`${new Date().toISOString().split('T')[0]}` min="2022-01-01") 
+                span.arrow ⬇
 
-            input#date-form-lte.form__input.form__input--search(type='date', placeholder='search' value=`${new Date().toISOString().split('T')[0]}` min="2022-01-01") 
-            span.arrow ⬇
+                input#date-form-gte.form__input.form__input--search(type='date', placeholder='search' value=`${date}` min="2022-01-01") 
+                span.arrow ⬆
 
-            input#date-form-gte.form__input.form__input--search(type='date', placeholder='search' value=`${date}` min="2022-01-01") 
-            span.arrow ⬆
-
-            .show-dates 🔎
+                .show-dates 🔎
     .header__logo
         if user
             a.nav__el-logo(href='/me')

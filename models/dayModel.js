@@ -8,17 +8,24 @@ const daySchema = new mongoose.Schema(
     lunch: [{ type: mongoose.Schema.ObjectId, ref: 'Meal' }],
     dinner: [{ type: mongoose.Schema.ObjectId, ref: 'Meal' }],
     calories: { type: Number, default: 0 },
-    checker: { type: String, unique: true },
+    checker: { type: String },
     history: {
       type: mongoose.Schema.ObjectId,
       ref: 'History',
     },
+    userId: String,
   },
   {
     toJSON: { virtuals: true },
     toObject: { virtuals: true },
   }
 );
+
+daySchema.pre('save', async function (next) {
+  this.checker = `${this.createdAt.toISOString().split('T')[0]}`;
+
+  next();
+});
 
 daySchema.pre(/^find/, async function (next) {
   this.populate({
@@ -45,12 +52,6 @@ daySchema.post(/^find/, function (object) {
   } else {
     return (object.calories = deepSearch(json, 'calories'));
   }
-});
-
-daySchema.pre('save', async function (next) {
-  this.checker = this.createdAt.toISOString().split('T')[0];
-
-  next();
 });
 
 const Day = new mongoose.model('Day', daySchema);

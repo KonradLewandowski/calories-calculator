@@ -1,4 +1,3 @@
-const mongoose = require('mongoose');
 const factory = require('./factoryController');
 const Day = require('./../models/dayModel');
 const Meal = require('./../models/mealModel');
@@ -16,6 +15,9 @@ exports.deleteAll = exports.deleteAll = factory.deleteAll(Day);
 //own controllers
 exports.createDay = catchAsync(async (req, res, next) => {
   const day = await Day.create(req.body);
+
+  // const validation = await Day.find({ history: req.user.history, checker: req.body.checker });
+
   day.history = req.user.history;
   day.save();
 

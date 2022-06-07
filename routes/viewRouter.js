@@ -15,6 +15,7 @@ router.get('/forgotPassword', viewController.forgotPassword);
 router.get('/resetPassword', viewController.resetPassword);
 
 router.get('/me', viewController.paginationQuery, viewController.dayOverview);
+router.get('/aboutProject', viewController.aboutProject);
 
 router.get('/deleteMe', viewController.deleteMe);
 

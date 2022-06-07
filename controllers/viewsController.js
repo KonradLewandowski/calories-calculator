@@ -48,6 +48,10 @@ exports.deleteMe = (req, res) => {
   sendRespond(res, 'deleteMe', 'Delete Account');
 };
 
+exports.aboutProject = (req, res) => {
+  sendRespond(res, 'aboutProject', 'About Project');
+};
+
 exports.paginationQuery = factory.pagination(Day);
 
 exports.updateUserData = catchAsync(async (req, res, next) => {

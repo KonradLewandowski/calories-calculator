@@ -53,7 +53,7 @@ exports.signup = catchAsync(async (req, res, next) => {
   });
 
   history.userId = newUser._id;
-  history.name = `${newUser.name}'s history`;
+  history.name = `${newUser.name}'s history-${newUser._id}`;
   history.save();
 
   //sending welcome email

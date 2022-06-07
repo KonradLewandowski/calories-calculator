@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const historySchema = new mongoose.Schema({
   userId: { type: mongoose.Schema.ObjectId, ref: 'User' },
-  name: { type: String, default: 'name', tolower: true, required: true, unique: true },
+  name: { type: String, default: 'name', tolower: true, required: true },
   days: { type: mongoose.Schema.ObjectId, ref: 'Day' },
 });
 

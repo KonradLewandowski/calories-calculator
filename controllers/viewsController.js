@@ -67,7 +67,7 @@ exports.updateUserData = catchAsync(async (req, res, next) => {
 
 exports.dayOverview = catchAsync(async (req, res, next) => {
   // 1) Get history data from collection
-
+  const results = await Day.find({ history: res.locals.user.history }).sort('-createdAt');
   const features = new APIFeatures(Day.find({ history: res.locals.user.history }), req.query)
     .filter()
     .sort()
@@ -75,7 +75,7 @@ exports.dayOverview = catchAsync(async (req, res, next) => {
     .paginate();
 
   const days = await features.query;
-  res.locals.dates = days;
+  res.locals.dates = results;
   //delete not saved meals
   const meals = await Meal.deleteMany({ userID: res.locals.user._id, active: { $ne: true } });
 

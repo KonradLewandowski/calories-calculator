@@ -59,10 +59,7 @@ exports.updateDay = catchAsync(async (req, res, next) => {
 });
 
 exports.findByDate = catchAsync(async (req, res, next) => {
-  const features = new APIFeatures(
-    Day.find().where({ history: req.user.history }).where('date').gte(req.params.date),
-    req.query
-  )
+  const features = new APIFeatures(Day.find().where({ history: req.user.history }), req.query)
     .filter()
     .sort()
     .limitFields()

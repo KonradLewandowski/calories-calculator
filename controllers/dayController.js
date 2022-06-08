@@ -39,11 +39,10 @@ exports.updateDay = catchAsync(async (req, res, next) => {
   const meal = req.body.mealType;
   const day = await Day.findByIdAndUpdate(
     req.params.id,
-
     {
       $push: { [meal]: [req.body.data[meal]] },
       createdAt: req.body.data.createdAt,
-      checker: req.body.data.createdAt,
+      checker: `${req.body.data.createdAt}-${req.user.id}`,
     },
     {
       new: true,

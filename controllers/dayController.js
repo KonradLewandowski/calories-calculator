@@ -14,9 +14,9 @@ exports.deleteAll = exports.deleteAll = factory.deleteAll(Day);
 
 //own controllers
 exports.createDay = catchAsync(async (req, res, next) => {
-  const day = await Day.create(req.body);
+  req.body.userID = req.user.id;
 
-  // const validation = await Day.find({ history: req.user.history, checker: req.body.checker });
+  const day = await Day.create(req.body);
 
   day.history = req.user.history;
   day.save();

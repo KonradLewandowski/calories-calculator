@@ -8,12 +8,12 @@ const daySchema = new mongoose.Schema(
     lunch: [{ type: mongoose.Schema.ObjectId, ref: 'Meal' }],
     dinner: [{ type: mongoose.Schema.ObjectId, ref: 'Meal' }],
     calories: { type: Number, default: 0 },
-    checker: { type: String },
+    checker: { type: String, unique: true },
     history: {
       type: mongoose.Schema.ObjectId,
       ref: 'History',
     },
-    userId: String,
+    userID: { type: String, required: true },
   },
   {
     toJSON: { virtuals: true },
@@ -22,7 +22,7 @@ const daySchema = new mongoose.Schema(
 );
 
 daySchema.pre('save', async function (next) {
-  this.checker = `${this.createdAt.toISOString().split('T')[0]}`;
+  this.checker = `${this.createdAt.toISOString().split('T')[0]}-${this.userID}`;
 
   next();
 });

@@ -1,8 +1,6 @@
 extends main
     
-block content
-
-         
+block content       
     main.main
         -if(result >= 11)
             a.btn-next(href=`${req.protocol}://${req.get('host')}/me?page=${req.query.page*1+1}`) Next page >

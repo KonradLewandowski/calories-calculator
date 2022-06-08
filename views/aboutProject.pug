@@ -1,15 +1,24 @@
 extends main
 
 block content
-    .technologies
-        .technology
-            .node
-                img(src="/img/Node.js_logo.svg", alt="nodejs")
-                .libraries
-                    img(src="/img/Expressjs_logo.png", alt="nodejs")
-        .technology
-            .java-script
-                img(src="/img/JavaScript_logo.svg", alt="nodejs")
-        .technology
-            .mongoDB
-                img(src="/img/MongoDB_logo.svg", alt="nodejs")
+    main.main
+        div
+            .technologies
+                .technology
+                    .node.main-tech
+                        img(src="/img/Node.js_logo.svg", alt="nodejs")
+                        .libraries
+                            img(src="/img/Express_logo.svg", alt="express")
+                            img(src="/img/Nodemailer_logo.png", alt="nodemailer")
+                .technology
+                    .java-script.main-tech
+                        img(src="/img/Frontend_logo.png", alt="frontend")
+                        .libraries
+                            img(src="/img/Pug_logo.svg", alt="pug")
+                            img(src="/img/npm_logo.svg", alt="npm")
+                .technology
+                    .mongoDB.main-tech
+                        img(src="/img/MongoDB_logo.svg", alt="mongodb")
+                        .libraries
+                            img(src="/img/Mongoose_logo.png", alt="mongoose")
+                            img(src="/img/Heroku_logo.png", alt="heroku")

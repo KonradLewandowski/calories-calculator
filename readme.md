@@ -1,6 +1,6 @@
 #Calories Calculator Application
 
-Zbudowany z wykorzystaniem nowoczesnych technologii: JavaScript, Node.js, Express, MongoDB, Pug. i więcej.
+Zbudowany z wykorzystaniem nowoczesnych technologii: JavaScript, Node.js, Express, MongoDB, Pug.js i więcej.
 
 Jest to mój pierwszy projekt, któy stworzyłem z myślą o zrozumieniu relacji i komunikacji pomiędzy frond-endem, a back-endem.
 

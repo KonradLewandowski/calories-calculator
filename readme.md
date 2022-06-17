@@ -1,3 +1,5 @@
+Heroku link: https://calories-calculator-konrad.herokuapp.com/
+
 #Calories Calculator Application
 
 Zbudowany z wykorzystaniem nowoczesnych technologii: JavaScript, Node.js, Express, MongoDB, Pug.js i więcej.

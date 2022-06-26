@@ -2,26 +2,23 @@ Heroku link: https://calories-calculator-konrad.herokuapp.com/
 
 #Calories Calculator Application
 
-Zbudowany z wykorzystaniem nowoczesnych technologii: JavaScript, Node.js, Express, MongoDB, Pug.js i więcej.
+Built with the use of modern technologies: JavaScript, Node.js, Express, MongoDB, Pug.js and more.
+This is my first project that I created with the intention of understanding the relationship and connections between front-end and back-end.
 
-Jest to mój pierwszy projekt, któy stworzyłem z myślą o zrozumieniu relacji i komunikacji pomiędzy frond-endem, a back-endem.
+Over the past few months by working on the project I got to know the environment of Node.js, learned how to manage databases, I got acquainted with issues related to the security of the server and databases and I know how front-end is connected to back-end.
 
-Na przestrzeni kilku miesięcy pracy z projektem poznałem środowisko Node.js, nauczyłem się zarządzać bazami danych, zapoznałem się z zagadnieniami związanymi z bezpieczeństwem serwera i baz danych, oraz wiem, jak back-end jest powiązany z frond-endem.
+While developing the project I made many mistakes which I corrected and drew conclusions from on a regular basis. Hundreds of hours of work have borne fruit in the form of creating secure authorization, protection from XSS attacks and prototype pollution and the implementation of CORS.
 
-Podczas pracy nad projektem popełniłem wiele błędów, z których wyciągałem wnioski na bieżąco. Setki godzin zaowocowały m.in. stworzeniem bezpiecznej autoryzacji, zabezpieczenia przed atakami XSS, podatność na prototype pollution, a także CORS.
+The calculator is a demo version that I created while simultaneously studying Node.js, JavaScript, Express, npm and other related libraries so the stability may sometimes leave much to be desired despite all of my efforts to make this application as complete as possible to the best of my abilities. I tried to create my code to be as clear and readable as possible.
 
-Kalkulator jest wersją demonstracyjną, którą tworzyłem jednocześnie ucząc się JavaScript, Node.js, Express, npm wraz z innymi powiązanymi bibliotekami, więc stabilość może czasami pozostawiać wiele do życzenia, pomimo, że robiłem wszystko co w mojej mocy, aby ta aplikacja była jak najbardziej kompletna.
-
-Starałem się jak najbardziej uporządkować swój kod. Zostawić wszystko czytelne i przejrzyste.
-
-Chciałbym poprosić o zapoznanie się z listą funkcjonalność aplikacji:
--Możliwość stworzenia nowego użytkownika i zalogowanie się, oraz wylogowanie.
--Zmiana hasła,
--Zmiana danych,
--Zresetowania hasła z wykorzystaniem linku wysłanego na e-mail przy użyciu biblioteki Nodemailer,
--Dodanie nowego produktu do bazy danych,
--Wyszukanie istniejącego produktu i dodanie go do włsnego posiłku,
--Edycja daty dni,
--Edycja posiłków w istniejącym dniu, wraz ze zmianą wartości "weight",
--Filtrowanie wyświetlanych dni z podanego zakresu czasu,
--Usunięcie istniejącego użytkownika.
+I kindly ask you familiarize yourself with the functionality of the application:
+-The option to create a new user, log in and log out
+-Changing the password
+-Edition of user data
+-Resetting the password via a link sent by email with the use of Nodemailer library
+-Adding a new product to the database
+-Searching an existing product and adding it to a meal
+-Edition of the day dates
+-Edition of existing meals for the current day including the “weight” value
+-Filtering displayed days from the chosen time range
+-Deleting an existing user

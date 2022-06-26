@@ -11,7 +11,7 @@ While developing the project I made many mistakes which I corrected and drew con
 
 The calculator is a demo version that I created while simultaneously studying Node.js, JavaScript, Express, npm and other related libraries so the stability may sometimes leave much to be desired despite all of my efforts to make this application as complete as possible to the best of my abilities. I tried to create my code to be as clear and readable as possible.
 
-I kindly ask you familiarize yourself with the functionality of the application:
+I kindly ask you to try out the functionalities of the application:
 -The option to create a new user, log in and log out
 -Changing the password
 -Edition of user data

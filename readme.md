@@ -1,4 +1,5 @@
-| Heroku link: https://calories-calculator-konrad.herokuapp.com/                                                                                                          | YouTube link: https://youtu.be/xXfNezI8pdM
+| Heroku link: https://calories-calculator-konrad.herokuapp.com/ 
+| YouTube link: https://youtu.be/xXfNezI8pdM
 
 #Calories Calculator Application
 

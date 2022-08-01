@@ -35,7 +35,8 @@ You can try live version on the server ([https://https://wanted-list.herokuapp.c
 
 ## Calories Calculator Application
 
-Built with the use of modern technologies: JavaScript, Node.js, Express, MongoDB, Pug.js and more.
+Built with the use of modern technologies:
+JavaScript, Node.js, Express, MongoDB, Pug.js and more.
 This is my first project that I created with the intention of understanding the relationship and connections between front-end and back-end.
 
 Over the past few months by working on the project I got to know the environment of Node.js, learned how to manage databases, I got acquainted with issues related to the security of the server and databases and I know how front-end is connected to back-end.

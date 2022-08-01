@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 **Note: Envirements are necessary. Please run the live version below to try. Thank you.**
+=======
+| Heroku link: https://calories-calculator-konrad.herokuapp.com/
+| YouTube link: https://youtu.be/xXfNezI8pdM
+
+> > > > > > > cbd32d6c40f43ea5f594d70b94b03fdb00dbbdaf
 
 # Getting Started with Wanted List App
 
@@ -40,7 +46,7 @@ A short video shows how it works ([https://youtu.be/xXfNezI8pdM](https://youtu.b
 ## Calories Calculator Application
 
 Built with the use of modern technologies:
-💥JavaScript, Node.js, Express, MongoDB, Pug.js and more.
+💥JavaScript, 💥Node.js, 💥Express, 💥MongoDB, 💥Pug.js and more.
 This is my first project that I created with the intention of understanding the relationship and connections between front-end and back-end.
 
 Over the past few months by working on the project I got to know the environment of Node.js, learned how to manage databases, I got acquainted with issues related to the security of the server and databases and I know how front-end is connected to back-end.

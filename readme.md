@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-
-## Calories calculator
-
-=======
-
-**Note: Envirements are necessary. Please run the live version below to try. Thank you.**
-
-# Getting Started with Wanted List App
+# Getting Started with Calories Calculator
 
 Built with the use of modern technologies:
 💥JavaScript, 💥Node.js, 💥Express, 💥MongoDB, 💥Pug.js and more.
@@ -17,6 +9,8 @@ Built with the use of modern technologies:
 4. Build your own meals history.
 
 ## Available Scripts
+
+**Note: Envirements are necessary. Please run the live version below to try. Thank you.**
 
 In the project directory, you can run:
 

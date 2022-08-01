@@ -38,7 +38,7 @@ Production mode for the app.
 
 ## Live version
 
-You can try live version on the server ([https://https://wanted-list.herokuapp.com/](https://calories-calculator-konrad.herokuapp.com/)).
+You can try live version on the server ([https://calories-calculator-konrad.herokuapp.com/](https://calories-calculator-konrad.herokuapp.com/)).
 
 ## YouTube short
 

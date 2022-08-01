@@ -1,6 +1,39 @@
-Heroku link: https://calories-calculator-konrad.herokuapp.com/
+**Note: Envirements are necessary. Please run the live version below to try. Thank you.**
 
-#Calories Calculator Application
+# Getting Started with Wanted List App
+
+This project was built with Node.js, Express, TypeScript, PostgreSQL,
+
+1. Create an e-mail on https://mailsac.com/ to recive e-mails from the app.
+2. Add new account, edit data or password.
+3. You can add a new product meal, or day / edit and delete.
+4. Build your own meals history.
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm install`
+
+Install all dependencies and packages.
+
+### `npm run start:dev`
+
+Launches the app in DEV mode. App will start on [the port 8080](http://127.0.0.1:8080/).
+
+### `npm run watch:js`
+
+Watch mode for parcel build.
+
+### `npm start`
+
+Production mode for the app.
+
+## Live version
+
+You can try live version on the server ([https://https://wanted-list.herokuapp.com/](https://calories-calculator-konrad.herokuapp.com/)).
+
+## Calories Calculator Application
 
 Built with the use of modern technologies: JavaScript, Node.js, Express, MongoDB, Pug.js and more.
 This is my first project that I created with the intention of understanding the relationship and connections between front-end and back-end.

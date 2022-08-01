@@ -30,7 +30,7 @@ Launches the app in DEV mode. App will start on [the port 8080](http://127.0.0.1
 
 ### `npm run watch:js`
 
-Watch mode for parcel build.
+Watch mode - parcel build.
 
 ### `npm start`
 

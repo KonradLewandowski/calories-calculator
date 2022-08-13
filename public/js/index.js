@@ -264,7 +264,8 @@ if (editDate)
       e.preventDefault();
       const id = e.target.closest('.day').children[0].getAttribute('value');
       const newDate = document.querySelector('.new-date');
-      newDate.style.display = 'block';
+      newDate.style.display = 'flex';
+
       newDate.addEventListener('keydown', (e) => {
         const createdAt = e.target.value;
         if (e.key === 'Enter') {

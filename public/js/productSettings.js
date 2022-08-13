@@ -19,6 +19,8 @@ export const addNewProduct = async (data) => {
 };
 
 export const addNewMeal = async (data) => {
+  console.log(data);
+
   try {
     const res = await axios({
       method: 'POST',
@@ -55,6 +57,8 @@ export const deleteMeal = async (id) => {
 };
 
 export const updateMeal = async (id, data) => {
+  console.log(data);
+
   try {
     const res = await axios({
       method: 'PUT',

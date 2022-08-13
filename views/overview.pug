@@ -1,7 +1,7 @@
 extends main
     
 block content       
-    main.main
+  
         -if(result >= 11)
             a.btn-next(href=`${req.protocol}://${req.get('host')}/me?page=${req.query.page*1+1}`) Next page >
         -if(req.query.page>1) 
@@ -50,11 +50,13 @@ block content
                                         .header_name(value='breakfast') 
                                             span=product.product.name[0].toUpperCase() + product.product.name.slice(1) 
                                         p=`🔥${product.product.energy*product.weight/100} kcal`
-                                        span=`⚖️${product.weight} g`
-                                        span=`🍖${product.product.whey} g`
-                                        span=`⚫${product.product.carbohydrates} g`
-                                        span=`🥓${product.product.fat} g`
-                                        p.line
+                                        
+                                          div.spans
+                                            span=`⚖️${product.weight} g`
+                                            span=`🍖${product.product.whey} g`
+                                            span=`⚫${product.product.carbohydrates} g`
+                                            span=`🥓${product.product.fat} g`
+
                                 .end
                         p.meal__container.lunch LUNCH 
                             a.btn_create.btn_add(href="#" value="lunch") ➕
@@ -65,13 +67,14 @@ block content
                                     .name_of_product
                                         .header_name(value='breakfast') 
                                             span=product.product.name[0].toUpperCase() + product.product.name.slice(1) 
-                                            span.delete.srv-side_delete(value=product._id) ❌
+                                            
                                         p=`🔥${product.product.energy*product.weight/100} kcal`
-                                        span=`⚖️${product.weight} g`
-                                        span=`🍖${product.product.whey} g`
-                                        span=`⚫${product.product.carbohydrates} g`
-                                        span=`🥓${product.product.fat} g`
-                                        p.line
+                                          div.spans
+                                            span=`⚖️${product.weight} g`
+                                            span=`🍖${product.product.whey} g`
+                                            span=`⚫${product.product.carbohydrates} g`
+                                            span=`🥓${product.product.fat} g`
+                              
                                 .end
                         p.meal__container.dinner DINNER 
                             a.btn_create.btn_add(href="#" value="dinner") ➕
@@ -82,13 +85,14 @@ block content
                                     .name_of_product
                                         .header_name(value='breakfast') 
                                             span=product.product.name[0].toUpperCase() + product.product.name.slice(1) 
-                                            span.delete.srv-side_delete(value=product._id) ❌
+                                            
                                         p=`🔥${product.product.energy*product.weight/100} kcal`
-                                        span=`⚖️${product.weight} g`
-                                        span=`🍖${product.product.whey} g`
-                                        span=`⚫${product.product.carbohydrates} g`
-                                        span=`🥓${product.product.fat} g`
-                                        p.line
+                                        div.spans
+                                            span=`⚖️${product.weight} g`
+                                            span=`🍖${product.product.whey} g`
+                                            span=`⚫${product.product.carbohydrates} g`
+                                            span=`🥓${product.product.fat} g`
+                           
                                 .end
 
         

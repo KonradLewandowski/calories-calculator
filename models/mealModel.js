@@ -7,7 +7,7 @@ const mealSchema = new mongoose.Schema({
   userID: { type: mongoose.Schema.ObjectId, ref: 'User' },
   active: {
     type: Boolean,
-    default: false,
+    default: true,
     select: false,
   },
 });

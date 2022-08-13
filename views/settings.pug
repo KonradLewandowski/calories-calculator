@@ -5,13 +5,16 @@ mixin navItem(link, text,  active)
     a(href=`${link}`) #{text}
 
 block content
-  main.main
+ 
     .user-view
       nav.user-view__menu
-        ul.side-nav.delete-me 
-          +navItem('/deleteMe', 'Delete Me', true)
+
+
+
         ul.side-nav
           +navItem('/settings', 'Settings',  true)
+        ul.side-nav.delete-me 
+          +navItem('/deleteMe', 'Delete Me', true)
 
         - if (user.role === 'admin')
           .admin-nav
@@ -41,7 +44,7 @@ block content
               input#confirm-email.form__input(type='email', placeholder='Confirm email', required, name='confirmEmail')
               button.btn.btn--small.btn__back Save settings
 
-        .line &nbsp;
+   
 
         .user-view__form-container
           h2.heading-secondary Password change

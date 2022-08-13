@@ -36,19 +36,22 @@ exports.createDay = catchAsync(async (req, res, next) => {
 });
 
 exports.updateDay = catchAsync(async (req, res, next) => {
-  const meal = req.body.mealType;
+  const { mealType } = req.body;
+
   const day = await Day.findByIdAndUpdate(
     req.params.id,
     {
-      $push: { [meal]: [req.body.data[meal]] },
-      createdAt: req.body.data.createdAt,
-      checker: `${req.body.data.createdAt}-${req.user.id}`,
+      $push: { [mealType]: [req.body.data[mealType]] },
     },
     {
       new: true,
       runValidators: true,
     }
   );
+
+  day.checker = `${req.body.data.createdAt}-${req.user.id}`;
+  day.createdAt = req.body.data.createdAt;
+  day.save();
 
   if (!day) next(new AppError('No product found with that ID', 404));
 

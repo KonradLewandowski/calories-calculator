@@ -129,7 +129,7 @@ body {
 .main {
   display: flex;
   align-items: center;
-  min-height: 66vh;
+  min-height: 100vh;
 }
 
 .login-form {

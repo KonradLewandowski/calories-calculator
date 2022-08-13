@@ -11973,7 +11973,7 @@ exports.getMeal = getMeal;
 
 var renderMeal = function renderMeal(data, mealType, id) {
   if (!mealType || !data || !id) return;
-  var html = "<div class=\"edit-field creating\" value=".concat(mealType, "><div class=\"name_of_product\"><div class=\"header_name\"><span>").concat(data.name[0].toUpperCase() + data.name.slice(1), "</span><span class=\"delete client-side_delete\" value=").concat(id, ">\u274C</span></div><p>\uD83D\uDD25").concat(data.energy * (data.weight / 100), "kcal</p><span>\u2696\uFE0F").concat(data.weight, "g</span><span>\uD83C\uDF56").concat(data.whey * (data.weight / 100), "g</span><span>\u26AB").concat(data.carbohydrates * (data.weight / 100), "g</span><span>\uD83E\uDD53").concat(data.fat * (data.weight / 100), "g</span><p class=\"line\" ></p></div></div>");
+  var html = "<div class=\"edit-field creating\" value=".concat(mealType, ">\n  <span class=\"delete client-side_delete\" value=").concat(id, ">\u274C</span>\n  <div class=\"name_of_product\"><div class=\"header_name\"><span>").concat(data.name[0].toUpperCase() + data.name.slice(1), "</span></div><p>\uD83D\uDD25").concat(data.energy * (data.weight / 100), "kcal</p><div class=\"spans\"><span>\u2696\uFE0F").concat(data.weight, "g</span><span>\uD83C\uDF56").concat(data.whey * (data.weight / 100), "g</span><span>\u26AB").concat(data.carbohydrates * (data.weight / 100), "g</span><span>\uD83E\uDD53").concat(data.fat * (data.weight / 100), "g</span></div></div></div>");
   document.querySelector(".".concat(mealType)).insertAdjacentHTML('afterend', html);
 };
 
@@ -67792,7 +67792,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59880" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65023" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

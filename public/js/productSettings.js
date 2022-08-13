@@ -95,15 +95,15 @@ export const getMeal = async (id) => {
 
 export const renderMeal = (data, mealType, id) => {
   if (!mealType || !data || !id) return;
-  const html = `<div class="edit-field creating" value=${mealType}><div class="name_of_product"><div class="header_name"><span>${
+  const html = `<div class="edit-field creating" value=${mealType}>
+  <span class="delete client-side_delete" value=${id}>❌</span>
+  <div class="name_of_product"><div class="header_name"><span>${
     data.name[0].toUpperCase() + data.name.slice(1)
-  }</span><span class="delete client-side_delete" value=${id}>❌</span></div><p>🔥${
-    data.energy * (data.weight / 100)
-  }kcal</p><span>⚖️${data.weight}g</span><span>🍖${
-    data.whey * (data.weight / 100)
-  }g</span><span>⚫${data.carbohydrates * (data.weight / 100)}g</span><span>🥓${
-    data.fat * (data.weight / 100)
-  }g</span><p class="line" ></p></div></div>`;
+  }</span></div><p>🔥${data.energy * (data.weight / 100)}kcal</p><div class="spans"><span>⚖️${
+    data.weight
+  }g</span><span>🍖${data.whey * (data.weight / 100)}g</span><span>⚫${
+    data.carbohydrates * (data.weight / 100)
+  }g</span><span>🥓${data.fat * (data.weight / 100)}g</span></div></div></div>`;
   document.querySelector(`.${mealType}`).insertAdjacentHTML('afterend', html);
 };
 

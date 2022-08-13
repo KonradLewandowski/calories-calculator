@@ -22,6 +22,8 @@ const daySchema = new mongoose.Schema(
 );
 
 daySchema.pre('save', async function (next) {
+  if (this.createdAt === undefined) this.createdAt = new Date();
+
   this.checker = `${this.createdAt.toISOString().split('T')[0]}-${this.userID}`;
 
   next();

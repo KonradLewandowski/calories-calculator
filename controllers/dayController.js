@@ -37,6 +37,7 @@ exports.createDay = catchAsync(async (req, res, next) => {
 
 exports.updateDay = catchAsync(async (req, res, next) => {
   const { mealType } = req.body;
+  console.log(new Date());
 
   const day = await Day.findByIdAndUpdate(
     req.params.id,
@@ -50,7 +51,7 @@ exports.updateDay = catchAsync(async (req, res, next) => {
   );
 
   day.checker = `${req.body.data.createdAt}-${req.user.id}`;
-  day.createdAt = req.body.data.createdAt;
+  day.createdAt = req.body.data.createdAt ? req.body.data.createdAt : day.createdAt;
   day.save();
 
   if (!day) next(new AppError('No product found with that ID', 404));

@@ -37,7 +37,6 @@ exports.createDay = catchAsync(async (req, res, next) => {
 
 exports.updateDay = catchAsync(async (req, res, next) => {
   const { mealType } = req.body;
-  console.log(new Date());
 
   const day = await Day.findByIdAndUpdate(
     req.params.id,

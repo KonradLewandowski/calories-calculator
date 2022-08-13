@@ -149,7 +149,7 @@ body {
 
 .form__input {
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 2.2rem;
   color: var(--primary-white);
   padding: 1rem 1.2rem;
   border: none;
@@ -483,7 +483,6 @@ body {
   font-size: 1.7rem;
   text-transform: uppercase;
   font-weight: 700;
-  /* grid-column: 1 / -1; */
 }
 .day__text {
   grid-column: 1 / -1;
@@ -528,6 +527,9 @@ body {
   text-decoration: none;
 }
 
+.day__footer-value {
+  font-size: 1.5rem;
+}
 #edit-date {
   color: var(--primary-white);
   background-image: var(--primary-dark);
@@ -557,6 +559,7 @@ body {
 }
 
 .meal__container {
+  font-size: 2rem;
   background: var(--primary-grey-transparent);
 }
 
@@ -629,22 +632,17 @@ body {
 }
 
 .name_of_product {
+  font-size: 1.5rem;
   display: grid;
-  grid-template-columns: auto auto;
 }
 .spans {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  gap: 1rem;
 }
 
 .header_name {
   font-weight: 900;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 1em;
+  font-size: 1.5rem;
 }
 
 .edit-field {

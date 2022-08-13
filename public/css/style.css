@@ -63,6 +63,10 @@ body {
   display: grid;
   grid-template-columns: repeat(5, min-content);
 }
+
+.nav-input input {
+  color: var(--primary-dark);
+}
 .header__logo {
   margin-right: auto;
 }

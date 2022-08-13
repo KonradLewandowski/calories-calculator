@@ -129,7 +129,7 @@ body {
 .main {
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  min-height: 70vh;
 }
 
 .login-form {
@@ -212,7 +212,7 @@ body {
 
 .footer {
   background: var(--primary-white);
-  padding: 3rem 2rem 1.5rem 2rem;
+  padding: 4rem 5rem;
   font-size: 1.4rem;
   display: grid;
   grid-template-columns: auto auto;

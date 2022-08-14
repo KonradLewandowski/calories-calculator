@@ -36,7 +36,7 @@ You can try live version on the server ([https://calories-calculator-konrad.hero
 
 ## YouTube short
 
-A short video shows how it works ([https://youtu.be/xXfNezI8pdM](https://youtu.be/xXfNezI8pdM)).
+A short video shows how it works ([https://youtu.be/-B6ga8fTDko](https://youtu.be/-B6ga8fTDko)).
 
 ## Calories Calculator Application
 
